@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Faxen -  Dashboard </title>
+    <title>Faxen - FutureTrade </title>
     <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
 
     <!-- plugin css file  -->
     <link rel="stylesheet" href="assets/plugin/datatables/responsive.dataTables.min.css">
-    <link rel="stylesheet" href="assets/plugin/datatables/dataTables.bootstrap5.min.css"> 
+    <link rel="stylesheet" href="assets/plugin/datatables/dataTables.bootstrap5.min.css">
     
     <!-- project css file  -->
     <link rel="stylesheet" href="assets/css/cryptoon.style.min.css">
@@ -30,7 +30,7 @@
                 <!-- Menu: main ul -->
                 <ul class="menu-list flex-grow-1 mt-4 px-1">
                     <li>
-                        <a class="m-link active" href="index.html">
+                        <a class="m-link" href="index.html">
                             <svg xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="24px" height="24px" viewBox="0 0 38 38">
                                 <path xmlns="http://www.w3.org/2000/svg"  d="M34,18.756V34H22v-8h-6v8h-4V14.31l7-3.89L34,18.756z M34,16.472V6h-6v7.139L34,16.472z" style="fill:var(--primary-color);" data-st="fill:var(--chart-color4);"></path>
                                 <path xmlns="http://www.w3.org/2000/svg" class="st0" d="M34,14.19V6h-6v2h4v5.08L19,5.86L0.51,16.13l0.98,1.74L19,8.14l17.51,9.73l0.98-1.74L34,14.19z M32,32h-8v-8H14  v8H6V17.653l-2,1.111V34h12v-8h6v8h12V18.764l-2-1.111V32z"></path>
@@ -50,7 +50,8 @@
                     <li>
                         <a class="m-link" href="market.html">
                             <svg  xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="24px" height="24px" viewBox="0 0 64 64">
-                                    <linearGradient id="crp_svg" gradientUnits="userSpaceOnUse" x1="13.876" y1="13.876" x2="50.1249" y2="50.1249">
+            
+                                     <linearGradient id="crp_svg" gradientUnits="userSpaceOnUse" x1="13.876" y1="13.876" x2="50.1249" y2="50.1249">
                                         <stop  offset="0" class="st2"/>
                                         <stop  offset="1" class="st3"/>
                                     </linearGradient>
@@ -99,7 +100,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="m-link" href="future-trade.html">
+                        <a class="m-link active" href="future-trade.html">
                             <svg  xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="24px" height="24px" viewBox="0 0 64 64">
                                 
                                     <path class="st0" d="M21.972,34.25c0-4.906,3.495-8.992,8.13-9.912l-3.492-7.764L14.317,40.282l8.673-1.635
@@ -654,573 +655,619 @@
 
             </div>
 
+            <!-- Body: Titel Header -->
+            <div class="body-header border-bottom d-flex py-3">
+                <div class="container-xxl">
+                    <div class="row align-items-center g-2">
+                        <div class="col">
+                            <!-- Pretitle -->
+                            <h1 class="h4 mt-1">Future Trade</h1>
+                        </div>
+                        <div class="col-12 col-md-6 text-md-end">
+                            <a href="https://themeforest.net/user/pixelwibes" title="Download" target="_blank" class="btn btn-white border lift">Download</a>
+                            <button type="button" class="btn btn-dark lift">Generate Report</button>
+                        </div>
+                    </div> <!-- Row end  -->
+                </div>
+            </div>
+
             <!-- Body: Body -->
-            <div class="body d-flex py-3"> 
+            <div class="body d-flex py-3">
                 <div class="container-xxl">
 
+                    <div class="row g-3 mb-3 row-deck">
+                        <div class="col-xl-12 col-xxl-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!-- TradingView Widget BEGIN -->
+                                    <div class="tradingview-widget-container">
+                                        <div id="tradingview_85dc0" style="height: 697px;"></div>
+                                    </div>
+                                    <!-- TradingView Widget END -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-12 col-xxl-4">
+                            <div class="card">
+                                <div class="card-header py-3 d-flex justify-content-between bg-transparent border-bottom-0 align-items-center">
+                                    <h6 class="mb-0 fw-bold ">Future Trade</h6> 
+                                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#leverage">10X</button>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="nav nav-tabs tab-body-header rounded d-inline-flex mb-4" role="tablist">
+                                        <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#Limit" role="tab">Limit</a></li>
+                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Market" role="tab">Market</a></li>
+                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Stoplimit" role="tab">Stop Limit</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="Limit">
+                                            <div class="row g-3">
+                                                <div class="col-lg-12">
+                                                    <div class="d-flex align-items-center justify-content-between my-3">
+                                                        <span class="small text-muted">Avbl</span>
+                                                        <span class="">310.800000 USDT</span>
+                                                    </div>
+                                                    <form>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text">Price</span>
+                                                            <input type="text" class="form-control">
+                                                            <span class="input-group-text">USDT</span>
+                                                        </div>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text">Size</span>
+                                                            <input type="text" class="form-control">
+                                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">USDT</button>
+                                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                                <li><a class="dropdown-item" href="#">USDT</a></li>
+                                                                <li><a class="dropdown-item" href="#">BTC</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="input-group">
+                                                            <div class="mb-2 d-flex justify-content-between align-items-center w-100">
+                                                                <span class="text-muted">0%</span>
+                                                                <span class="text-muted px-2">25%</span>
+                                                                <span class="text-muted px-1">50%</span>
+                                                                <span class="text-muted px-1">75%</span>
+                                                                <span class="text-muted">100%</span>
+                                                            </div>
+                                                            <input type="range" class="form-range" min='1' max='5' value='1' step='1'>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between flex-wrap mb-3">
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Buy</div>
+                                                                <div class="text-muted truncated px-1"> 0.00 USDT</div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Sell</div>
+                                                                <div class="text-muted  truncated px-1"> 0.00 USDT </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">TP/SL</label>
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" class="form-control" placeholder="Take Profit">
+                                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Mark</button>
+                                                                <ul class="dropdown-menu dropdown-menu-end">
+                                                                    <li><a class="dropdown-item" href="#">Last</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Mark</a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" class="form-control" placeholder="Stop Loss">
+                                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Mark</button>
+                                                                <ul class="dropdown-menu dropdown-menu-end">
+                                                                    <li><a class="dropdown-item" href="#">Last</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Mark</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 d-flex justify-content-between">
+                                                            <button type="submit" class="btn btn-light-success py-2 text-uppercase">BUY/Long</button>
+                                                            <button type="submit" class="btn btn-light-danger py-2 text-uppercase">Sell/Short</button>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between flex-wrap">
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Cost</div>
+                                                                <div class="text-muted truncated px-1"> 0.00 USDT</div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Cost</div>
+                                                                <div class="text-muted  truncated px-1"> 0.00 USDT </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between flex-wrap">
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Max</div>
+                                                                <div class="text-muted truncated px-1"> 0.00 USDT</div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Max</div>
+                                                                <div class="text-muted  truncated px-1"> 0.00 USDT </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div><!-- Limit Tab End -->
+
+                                        <div class="tab-pane fade" id="Market">
+                                            <div class="row g-3">
+                                                <div class="col-lg-12">
+                                                    <div class="d-flex align-items-center justify-content-between my-3">
+                                                        <span class="small text-muted">Avbl</span>
+                                                        <span class="">310.800000 USDT</span>
+                                                    </div>
+                                                    <form>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text">Size</span>
+                                                            <input type="text" class="form-control">
+                                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">USDT</button>
+                                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                                <li><a class="dropdown-item" href="#">USDT</a></li>
+                                                                <li><a class="dropdown-item" href="#">BTC</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="input-group">
+                                                            <div class="mb-2 d-flex justify-content-between align-items-center w-100">
+                                                                <span class="text-muted">0%</span>
+                                                                <span class="text-muted px-2">25%</span>
+                                                                <span class="text-muted px-1">50%</span>
+                                                                <span class="text-muted px-1">75%</span>
+                                                                <span class="text-muted">100%</span>
+                                                            </div>
+                                                            <input type="range" class="form-range" min='1' max='5' value='1' step='1'>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between flex-wrap mb-3">
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Buy</div>
+                                                                <div class="text-muted truncated px-1"> 0.00 USDT</div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Sell</div>
+                                                                <div class="text-muted  truncated px-1"> 0.00 USDT </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">TP/SL</label>
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" class="form-control" placeholder="Take Profit">
+                                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Mark</button>
+                                                                <ul class="dropdown-menu dropdown-menu-end">
+                                                                    <li><a class="dropdown-item" href="#">Last</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Mark</a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" class="form-control" placeholder="Stop Loss">
+                                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Mark</button>
+                                                                <ul class="dropdown-menu dropdown-menu-end">
+                                                                    <li><a class="dropdown-item" href="#">Last</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Mark</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 d-flex justify-content-between">
+                                                            <button type="submit" class="btn btn-light-success py-2 text-uppercase">BUY/Long</button>
+                                                            <button type="submit" class="btn btn-light-danger py-2 text-uppercase">Sell/Short</button>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between flex-wrap">
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Cost</div>
+                                                                <div class="text-muted truncated px-1"> 0.00 USDT</div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Cost</div>
+                                                                <div class="text-muted  truncated px-1"> 0.00 USDT </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between flex-wrap">
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Max</div>
+                                                                <div class="text-muted truncated px-1"> 0.00 USDT</div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Max</div>
+                                                                <div class="text-muted  truncated px-1"> 0.00 USDT </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div><!-- Market Tab End -->
+
+                                        <div class="tab-pane fade" id="Stoplimit">
+                                            <div class="row g-3">
+                                                <div class="col-lg-12">
+                                                    <div class="d-flex align-items-center justify-content-between my-3">
+                                                        <span class="small text-muted">Avbl</span>
+                                                        <span class="">310.800000 USDT</span>
+                                                    </div>
+                                                    <form>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text">Stop Price</span>
+                                                            <input type="text" class="form-control">
+                                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Mark</button>
+                                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                                <li><a class="dropdown-item" href="#">Limit</a></li>
+                                                                <li><a class="dropdown-item" href="#">Mark</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text">Price</span>
+                                                            <input type="text" class="form-control">
+                                                            <span class="input-group-text">USDT</span>
+                                                        </div>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text">Size</span>
+                                                            <input type="text" class="form-control">
+                                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">USDT</button>
+                                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                                <li><a class="dropdown-item" href="#">USDT</a></li>
+                                                                <li><a class="dropdown-item" href="#">BTC</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="input-group">
+                                                            <div class="mb-2 d-flex justify-content-between align-items-center w-100">
+                                                                <span class="text-muted">0%</span>
+                                                                <span class="text-muted px-2">25%</span>
+                                                                <span class="text-muted px-1">50%</span>
+                                                                <span class="text-muted px-1">75%</span>
+                                                                <span class="text-muted">100%</span>
+                                                            </div>
+                                                            <input type="range" class="form-range" min='1' max='5' value='1' step='1'>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between flex-wrap mb-3">
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Buy</div>
+                                                                <div class="text-muted truncated px-1"> 0.00 USDT</div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Sell</div>
+                                                                <div class="text-muted  truncated px-1"> 0.00 USDT </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">TP/SL</label>
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" class="form-control" placeholder="Take Profit">
+                                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Mark</button>
+                                                                <ul class="dropdown-menu dropdown-menu-end">
+                                                                    <li><a class="dropdown-item" href="#">Last</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Mark</a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" class="form-control" placeholder="Stop Loss">
+                                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Mark</button>
+                                                                <ul class="dropdown-menu dropdown-menu-end">
+                                                                    <li><a class="dropdown-item" href="#">Last</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Mark</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 d-flex justify-content-between">
+                                                            <button type="submit" class="btn btn-light-success py-2 text-uppercase">BUY/Long</button>
+                                                            <button type="submit" class="btn btn-light-danger py-2 text-uppercase">Sell/Short</button>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between flex-wrap">
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Cost</div>
+                                                                <div class="text-muted truncated px-1"> 0.00 USDT</div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Cost</div>
+                                                                <div class="text-muted  truncated px-1"> 0.00 USDT </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between flex-wrap">
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Max</div>
+                                                                <div class="text-muted truncated px-1"> 0.00 USDT</div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <div class="truncated">Max</div>
+                                                                <div class="text-muted  truncated px-1"> 0.00 USDT </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div><!-- Stoplimit Tab End -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Row End -->
+
                     <div class="row g-3 mb-3">
-                        <div class="col-lg-12">
+                        <div class="col-xl-5">
                             <div class="card">
-                                <div class="card-body">
-                                    <div class="row g-3 align-items-center">
-                                        <div class="col-md-6 col-lg-6 col-xl-3">
-                                            <div class="d-flex">
-                                                <img class="avatar rounded-circle" src="assets/images/profile_av.svg" alt="profile">
-                                                <div class="flex-fill ms-3">
-                                                    <p class="mb-0"><span class="font-weight-bold">John	Quinn</span></p>
-                                                    <small class="">Johnquinn@gmail.com</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 col-xl-3">
-                                            <div class="d-flex flex-column">
-                                                <span class="text-muted mb-1">User ID:164647708</span>
-                                                <span class="small text-muted flex-fill text-truncate">Last login time 2021-09-29 10:56:22</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 col-xl-2">
-                                            <div class="d-flex-inline">
-                                                <span class="badge bg-careys-pink mb-1">Personal</span>
-                                                <span class="small text-muted d-flex align-items-center"><i class="icofont-diamond px-1 fs-5 color-lightyellow "></i> VIP</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 col-xl-4">
-                                            <a href="referral.html" title="invite" class="btn btn-primary text-dark mb-1">40% commission:Invite friends now!</a>
-                                            <a href="#" title="invite" class="d-block"><i class="icofont-twitter px-1 fs-6 color-lightblue"></i>not linked</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- Row End -->
-
-                    <div class="row g-3 mb-3 row-cols-1 row-cols-md-2 row-cols-lg-4">
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body d-flex align-items-center">
-                                    <div class="flex-fill text-truncate">
-                                        <span class="text-muted small text-uppercase">BNB/BUSD</span>
-                                        <div class="d-flex flex-column">
-                                            <div class="price-block">
-                                                <span class="fs-6 fw-bold color-price-up">418</span>
-                                                <span class="small text-muted px-2">$418</span>
-                                            </div>
-                                            <div class="price-report">
-                                                <span class="small text-danger">- 1.28% <i class="fa fa-level-down"></i></span>
-                                                <span class="small text-muted px-2">Volume:109,267,865.92 BUSD</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="apexspark1"></div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body d-flex align-items-center">
-                                    <div class="flex-fill text-truncate">
-                                        <span class="text-muted small text-uppercase">ETH/USDT</span>
-                                        <div class="d-flex flex-column">
-                                            <div class="price-block">
-                                                <span class="fs-6 fw-bold color-price-down">3499</span>
-                                                <span class="small text-muted px-2">$3500</span>
-                                            </div>
-                                            <div class="price-report">
-                                                <span class="small text-danger">- 1.79% <i class="fa fa-level-down"></i></span>
-                                                <span class="small text-muted px-2">Volume:541,545,011.76 USDT</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="apexspark2"></div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body d-flex align-items-center">
-                                    <div class="flex-fill text-truncate">
-                                        <span class="text-muted small text-uppercase">DOT/BUSD</span>
-                                        <div class="d-flex flex-column">
-                                            <div class="price-block">
-                                                <span class="fs-6 fw-bold">35.00</span>
-                                                <span class="small text-muted px-2">$35</span>
-                                            </div>
-                                            <div class="price-report">
-                                                <span class="small text-success">+ 3.78% <i class="fa fa-level-up"></i></span>
-                                                <span class="small text-muted px-2">Volume:63,324,607.43 BUSD BUSD</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="apexspark3"></div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body d-flex align-items-center">
-                                    <div class="flex-fill text-truncate">
-                                        <span class="text-muted small text-uppercase">GRT/USDT</span>
-                                        <div class="d-flex flex-column">
-                                            <div class="price-block">
-                                                <span class="fs-6 fw-bold color-price-up">0.8413</span>
-                                                <span class="small text-muted px-2">$1</span>
-                                            </div>
-                                            <div class="price-report">
-                                                <span class="small text-danger">- 1.11% <i class="fa fa-level-down"></i></span>
-                                                <span class="small text-muted px-2">Volume:28,538,521.44 USDT</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="apexspark4"></div>
-                            </div>
-                        </div>
-                    </div><!-- Row End -->
-
-                    <div class="row g-3 mb-3 row-deck">
-                        <div class="col-xl-12 col-xxl-7">
-                            <div class="card">
-                                <div class="card-header py-3 d-flex justify-content-between bg-transparent border-bottom align-items-center flex-wrap">
-                                    <h6 class="mb-0 fw-bold">Balance Details</h6> 
-                                    <ul class="nav nav-tabs tab-body-header rounded d-inline-flex mt-2 mt-md-0" role="tablist">
-                                        <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#Spot" role="tab">Spot</a></li>
-                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#P2P" role="tab">P2P</a></li>
-                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Margin" role="tab">Margin</a></li>
-                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Future" role="tab">Future</a></li>
-                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Earn" role="tab">Earn</a></li>
-                                    </ul>
+                                <div class="card-header py-3 d-flex justify-content-between bg-transparent border-bottom-0">
+                                    <h6 class="mb-0 fw-bold">Order Book</h6> 
                                 </div>
                                 <div class="card-body">
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade show active" id="Spot">
-                                            <div class="row g-3">
-                                                <div class="col-lg-6">
-                                                    <div>Account balance:</div>
-                                                    <h3>0.18005388 BTC</h3>
-                                                    <div class="mt-3 pt-3 text-uppercase text-muted pt-2 small">Buy this month</div>
-                                                    <h5>3.0675432 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Sell this month</div>
-                                                    <h5>2.0345618 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Estimated Value:</div>
-                                                    <h5>$22000.29</h5>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div id="apex-simple-donut"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="P2P">
-                                            <div class="row g-3">
-                                                <div class="col-lg-6">
-                                                    <div>Account balance:</div>
-                                                    <h3>0.00005388 BTC</h3>
-                                                    <div class="mt-3 pt-3 text-uppercase text-muted pt-2 small">Buy this month</div>
-                                                    <h5>0.00005388 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Sell this month</div>
-                                                    <h5>2.0345618 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Estimated Value:</div>
-                                                    <h5>$2000.29</h5>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div id="apex-simple-donutp2p"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="Margin">
-                                            <div class="row g-3">
-                                                <div class="col-lg-6">
-                                                    <div>Total balance:</div>
-                                                    <h3>0.00095000 BTC≈$3570</h3>
-                                                    <div class="mt-3 pt-3 text-uppercase text-muted pt-2 small">Total Debt:</div>
-                                                    <h5>0.00005388 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Account Equity:</div>
-                                                    <h5>2.0345618 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Profit & Loss:</div>
-                                                    <h5>0.95 BTC(1.6.00%) $25 (8.00%)</h5>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div id="apex-circle-chart-multiplemargin"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="Future">
-                                            <div class="row g-3">
-                                                <div class="col-lg-6">
-                                                    <div>Total Margin Balance:</div>
-                                                    <h3>0.00095000 BTC≈$3570</h3>
-                                                    <div class="mt-3 pt-3 text-uppercase text-muted pt-2 small">Total Wallet Balance:</div>
-                                                    <h5>0.00005388 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Total Unrealized PNL:</div>
-                                                    <h5>2.0345618 BTC</h5>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div id="apex-circle-gradientfuture"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="Earn">
-                                            <div class="row g-3">
-                                                <div class="col-lg-6">
-                                                    <div>Total Margin Balance:</div>
-                                                    <h3>0.00095000 BTC≈$3570</h3>
-                                                    <div class="mt-3 pt-3 text-uppercase text-muted pt-2 small">Locked:</div>
-                                                    <h5>0.00000388 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Flexible:</div>
-                                                    <h5>0.0000018 BTC</h5>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div id="apex-circle-chartearn"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-12 col-xxl-5">
-                            <div class="card">
-                                <div class="card-header py-3 d-flex justify-content-between bg-transparent align-items-center">
-                                    <h6 class="mb-0 fw-bold">Increase your account security</h6> 
-                                    <a href="security.html" title="security" class="d-inline-flex"><i class="icofont-caret-right fs-5"></i></a>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row row-cols-2 g-0">
-                                        <div class="col">
-                                            <div class="security border-bottom border-end">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-green mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Enable 2FA</span>
-                                                        <span>Enabled</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="security border-bottom">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-green mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Identity Verification</span>
-                                                        <span>Verified</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="security border-bottom border-end">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-red mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Anti-phishing Code</span>
-                                                        <a href="security.html" title="setup" class="text-decoration-underline">Setup</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="security border-bottom">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-red mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Withdrawal Whitelist</span>
-                                                        <a href="security.html" title="setup" class="text-decoration-underline">Turn on</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="security border-bottom border-end">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-red mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Security Key</span>
-                                                        <a href="security.html" title="setup" class="text-decoration-underline">Setup</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="security border-bottom">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-red mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Google Authenticator</span>
-                                                        <a href="security.html" title="setup" class="text-decoration-underline">Setup</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="security  border-end">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-green mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Phone Number</span>
-                                                        <span>74****57</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="security ">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-green mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Email Address </span>
-                                                        <span>ni***@gmail.com</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- Row End -->
-
-                    <div class="row g-3 mb-3 row-deck">
-                        <div class="col-xl-4 col-xxl-5">
-                            <div class="card">
-                                <div class="card-header py-3 d-flex flex-wrap justify-content-between align-items-center bg-transparent border-bottom-0">
-                                    <h6 class="mb-0 fw-bold">Top Coin Volume</h6>
-                                </div>
-                                <div class="card-body">
-                                    <span class="h3 d-block mb-2">$97,431.14 USD</span>
-                                    <!-- Progress -->
-                                    <div class="progress rounded-pill mb-1" style="height: 5px;">
-                                        <div class="progress-bar chart-color1" role="progressbar" style="width: 32%" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100"></div>
-                                        <div class="progress-bar chart-color2" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
-                                        <div class="progress-bar chart-color3" role="progressbar" style="width: 13%" aria-valuenow="13" aria-valuemin="0" aria-valuemax="100"></div>
-                                        <div class="progress-bar chart-color4" role="progressbar" style="width: 7%" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="d-flex justify-content-between mb-4">
-                                        <span>0%</span>
-                                        <span>100%</span>
-                                    </div>
-                                    <!-- End Progress -->
-                                    <div class="table-responsive">
-                                        <table class="table  table-nowrap mb-0">
-                                            <tbody>
-                                                <tr>
-                                                    <td><i class="fa fa-square chart-text-color1"></i> BTC</td>
-                                                    <td>5.71095643</td>
-                                                    <td><span class="badge bg-success">+12.1%</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="fa fa-square chart-text-color2"></i> LTC</td>
-                                                    <td>2.409425</td>
-                                                    <td><span class="badge bg-warning">+6.9%</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="fa fa-square chart-text-color3"></i> XRP</td>
-                                                    <td>0.0906654</td>
-                                                    <td><span class="badge bg-danger">-1.5%</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="fa fa-square chart-text-color4"></i> DASH</td>
-                                                    <td>0.007653</td>
-                                                    <td><span class="badge bg-success">1.9%</span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-xxl-7">
-                           <div class="card">
-                                <div class="card-header py-3 d-flex justify-content-between bg-transparent border-bottom align-items-center flex-wrap">
-                                    <h6 class="mb-0 fw-bold">Login Activity</h6> 
-                                    <ul class="nav nav-tabs tab-body-header rounded d-inline-flex mt-2 mt-md-0" role="tablist">
-                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Activity" role="tab">Activity</a></li>
-                                        <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#Devices" role="tab">Devices</a></li>
-                                    </ul>
-                                </div>
-                               <div class="card-body">
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade" id="Activity">
-                                            <ul class="list-unstyled list mb-0">
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color1"><i class="fa fa-globe" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">web</div>
-                                                        <small class="text-muted">Mumbai India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">122.170.109.22</span>
-                                                        <span class="text-muted d-block small">2021-09-30 11:00:52</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color2"><i class="fa fa-globe" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">web</div>
-                                                        <small class="text-muted">Mumbai India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">122.170.109.22</span>
-                                                        <span class="text-muted d-block small">2021-09-30 11:00:20</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color3"><i class="fa fa-globe" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">web</div>
-                                                        <small class="text-muted">Mumbai India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">122.170.109.21</span>
-                                                        <span class="text-muted d-block small">2021-09-29 10:56:22</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color4"><i class="fa fa-globe" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">web</div>
-                                                        <small class="text-muted">Pune India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">198.182.109.22</span>
-                                                        <span class="text-muted d-block small">2021-09-30 12:50:52</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color2"><i class="fa fa-globe" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">web</div>
-                                                        <small class="text-muted">Banglor India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">126.150.109.22</span>
-                                                        <span class="text-muted d-block small">2021-09-30 10:00:20</span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="tab-pane fade show active" id="Devices">
-                                            <ul class="list-unstyled list mb-0">
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color1"><i class="fa fa-chrome" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">Chrome V94.0.4606.61 (Windows)</div>
-                                                        <small class="text-muted">Mumbai India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">122.170.109.22</span>
-                                                        <span class="text-muted d-block small">2021-09-30 11:00:52</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color2"><i class="fa fa-mobile" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">iPhone</div>
-                                                        <small class="text-muted">Mumbai India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">27.57.172.87</span>
-                                                        <span class="text-muted d-block small">2021-09-23 09:03:35</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color3"><i class="fa fa-firefox" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">Mozila V92.0.4515.159 (Windows)</div>
-                                                        <small class="text-muted">Mumbai India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">117.99.104.150</span>
-                                                        <span class="text-muted d-block small">2021-08-19 08:01:44</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color4"><i class="fa fa-mobile" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">Android</div>
-                                                        <small class="text-muted">Pune India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">118.99.104.150</span>
-                                                        <span class="text-muted d-block small">2021-09-30 12:50:52</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color3"><i class="fa fa-safari" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">Safari V84.0.4515.159 (Mac)</div>
-                                                        <small class="text-muted">Banglor India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">177.192.104.150</span>
-                                                        <span class="text-muted d-block small">2021-08-19 07:01:44</span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                               </div>
-                           </div>   
-                        </div>
-                    </div><!-- Row End -->
-
-                    <div class="row g-3 mb-3 row-deck">
-                        <div class="col-xl-12">
-                            <div class="card">
-                                <div class="card-header py-3 d-flex justify-content-between">
-                                    <h6 class="mb-0 fw-bold">Recent Transactions</h6> 
-                                </div>
-                                <div class="card-body">
-                                    <table id="ordertabthree" class="priceTable table table-hover custom-table-2 table-bordered align-middle mb-0" style="width:100%">
+                                    <table id="priceTableup" class="priceTable table table-hover custom-table-2 table-bordered align-middle mb-0" style="width:100%">
                                         <thead>
                                             <tr>
-                                                <th>Date</th>
-                                                <th>Pair</th>
-                                                <th>Side</th>
-                                                <th>Price</th>
-                                                <th>Executed</th>
-                                                <th>Fee</th>
-                                                <th>Total</th>
+                                                <th>Price(USDT)</th>
+                                                <th>Amount(USDT)</th>
+                                                <th>Total</th> 
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>09-18 17:32:15</td>
-                                                <td><img src="assets/images/coin/ETH.png" alt="" class="img-fluid avatar mx-1">ETH/USDT</td>
-                                                <td><span class="color-price-down">Sell</span></td>
-                                                <td>3,487.50</td>
-                                                <td>0.0110</td>
-                                                <td>0.03836250 USDT</td>
-                                                <td>38.36250000 USDT</td>
+                                                <td><span class="color-price-up">43978.43</span></td>
+                                                <td>0.11228</td>
+                                                <td>6,938.88312</td>
                                             </tr>
                                             <tr>
-                                                <td>09-18 17:31:11</td>
-                                                <td><img src="assets/images/coin/SOL.png" alt="" class="img-fluid avatar mx-1">SOL/USDT</td>
-                                                <td><span class="color-price-down">Sell</span></td>
-                                                <td>160.33</td>
-                                                <td>0.75</td>
-                                                <td>0.12024750 USDT</td>
-                                                <td>120.24750000 USDT</td>
+                                                <td><span class="color-price-down">44279.20</span></td>
+                                                <td>0.17214</td>
+                                                <td>76,053.29043</td>
                                             </tr>
                                             <tr>
-                                                <td>09-18 08:52:04</td>
-                                                <td><img src="assets/images/coin/ETH.png" alt="" class="img-fluid avatar mx-1">ETH/USDT</td>
-                                                <td><span class="color-price-up">Buy</span></td>
-                                                <td>3,439.20</td>
-                                                <td>0.0111</td>
-                                                <td>0.00001110 ETH</td>
-                                                <td>38.17512000 USDT</td>
+                                                <td><span class="color-price-up">43928.23</span></td>
+                                                <td>0.08881</td>
+                                                <td>1,677.76807</td>
                                             </tr>
                                             <tr>
-                                                <td>09-17 08:34:14</td>
-                                                <td><img src="assets/images/coin/SOL.png" alt="" class="img-fluid avatar mx-1">SOL/USDT</td>
-                                                <td><span class="color-price-up">Buy</span></td>
-                                                <td>147.04</td>
-                                                <td>0.76</td>
-                                                <td>0.00076000 SOL</td>
-                                                <td>111.75040000 USDT</td>
+                                                <td><span class="color-price-up">43978.90</span></td>
+                                                <td>0.00062</td>
+                                                <td>1,151.15971</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="color-price-down">43978.90</span></td>
+                                                <td>0.00062</td>
+                                                <td>1,151.15971</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="color-price-up">44279.20</span></td>
+                                                <td>0.17214</td>
+                                                <td>76,053.29043</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="color-price-up">42978.43</span></td>
+                                                <td>0.11228</td>
+                                                <td>6,938.88312</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="color-price-up">42925.73</span></td>
+                                                <td>0.08752</td>
+                                                <td>5,022.51319</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="color-price-down">43978.43</span></td>
+                                                <td>0.11228</td>
+                                                <td>6,938.88312</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="color-price-up">42978.90</span></td>
+                                                <td>0.00062</td>
+                                                <td>1,151.15971</td>
                                             </tr>
                                         </tbody>
                                     </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-7">
+                            <div class="card">
+                                <div class="card-header py-3 d-flex justify-content-between bg-transparent border-bottom-0 align-items-center">
+                                    <h6 class="mb-0 fw-bold ">Future Status</h6> 
+                                </div>
+                                <div class="card-body">
+                                    <ul class="nav nav-tabs tab-body-header rounded d-inline-flex mb-3" role="tablist">
+                                        <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#OpenOrder" role="tab">Open Order(5)</a></li>
+                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#OrderHistory" role="tab">Order History</a></li>
+                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#TradeHistory" role="tab">Trade History</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="OpenOrder">
+                                            <table id="ordertabone" class="priceTable table table-hover custom-table-2 table-bordered align-middle mb-0" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Date</th>
+                                                        <th>Pair</th>
+                                                        <th>Type</th> 
+                                                        <th>Side</th>
+                                                        <th>Price</th>
+                                                        <th>Amount</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>09-18 17:32:15</td>
+                                                        <td><img src="assets/images/coin/ETH.png" alt="" class="img-fluid avatar mx-1">ETH/USDT</td>
+                                                        <td>Limit</td>
+                                                        <td><span class="color-price-up">Buy</span></td>
+                                                        <td>2774.00</td>
+                                                        <td>0.000378</td>
+                                                        <td>
+                                                            <div class="btn-group" role="group">
+                                                                <button type="button" class="btn btn-outline-secondary"><i class="icofont-edit text-success"></i></button>
+                                                                <button type="button" class="btn btn-outline-secondary deleterow"><i class="icofont-ui-delete text-danger"></i></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>09-18 17:32:15</td>
+                                                        <td><img src="assets/images/coin/DGD.png" alt="" class="img-fluid avatar mx-1">DGD/USDT</td>
+                                                        <td>Limit</td>
+                                                        <td><span class="color-price-down">Sell</span></td>
+                                                        <td>35.00</td>
+                                                        <td>0.000005</td>
+                                                        <td>
+                                                            <div class="btn-group" role="group">
+                                                                <button type="button" class="btn btn-outline-secondary"><i class="icofont-edit text-success"></i></button>
+                                                                <button type="button" class="btn btn-outline-secondary deleterow"><i class="icofont-ui-delete text-danger"></i></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>09-21 13:32:15</td>
+                                                        <td><img src="assets/images/coin/ADA.png" alt="" class="img-fluid avatar mx-1">ADA/USDT</td>
+                                                        <td>Limit</td>
+                                                        <td><span class="color-price-down">Sell</span></td>
+                                                        <td>3.500</td>
+                                                        <td>0.000001</td>
+                                                        <td>
+                                                            <div class="btn-group" role="group">
+                                                                <button type="button" class="btn btn-outline-secondary"><i class="icofont-edit text-success"></i></button>
+                                                                <button type="button" class="btn btn-outline-secondary deleterow"><i class="icofont-ui-delete text-danger"></i></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>09-21 13:32:15</td>
+                                                        <td><img src="assets/images/coin/BNB.png" alt="" class="img-fluid avatar mx-1">BNB/USDT</td>
+                                                        <td>Limit</td>
+                                                        <td><span class="color-price-down">Sell</span></td>
+                                                        <td>415.00</td>
+                                                        <td>0.000041</td>
+                                                        <td>
+                                                            <div class="btn-group" role="group">
+                                                                <button type="button" class="btn btn-outline-secondary"><i class="icofont-edit text-success"></i></button>
+                                                                <button type="button" class="btn btn-outline-secondary deleterow"><i class="icofont-ui-delete text-danger"></i></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>09-20 13:32:15</td>
+                                                        <td><img src="assets/images/coin/DOGE.png" alt="" class="img-fluid avatar mx-1">DOGE/USDT</td>
+                                                        <td>Limit</td>
+                                                        <td><span class="color-price-down">Sell</span></td>
+                                                        <td>0.2040</td>
+                                                        <td>0.203900</td>
+                                                        <td>
+                                                            <div class="btn-group" role="group">
+                                                                <button type="button" class="btn btn-outline-secondary"><i class="icofont-edit text-success"></i></button>
+                                                                <button type="button" class="btn btn-outline-secondary deleterow"><i class="icofont-ui-delete text-danger"></i></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="tab-pane fade" id="OrderHistory">
+                                            <table id="ordertabtwo" class="priceTable table table-hover custom-table-2 table-bordered align-middle mb-0" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Date</th>
+                                                        <th>Pair</th>
+                                                        <th>Type</th> 
+                                                        <th>Side</th>
+                                                        <th>Average</th>
+                                                        <th>Price</th>
+                                                        <th>Executed</th>
+                                                        <th>Amount</th>
+                                                        <th>Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>09-18 17:32:15</td>
+                                                        <td><img src="assets/images/coin/ETH.png" alt="" class="img-fluid avatar mx-1">ETH/USDT</td>
+                                                        <td>Market</td>
+                                                        <td><span class="color-price-down">Sell</span></td>
+                                                        <td>3,487.50</td>
+                                                        <td>Market</td>
+                                                        <td>0.0110</td>
+                                                        <td>0.0110</td>
+                                                        <td>38.36</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>09-18 17:31:11</td>
+                                                        <td><img src="assets/images/coin/SOL.png" alt="" class="img-fluid avatar mx-1">SOL/USDT</td>
+                                                        <td>Market</td>
+                                                        <td><span class="color-price-down">Sell</span></td>
+                                                        <td>160.33</td>
+                                                        <td>Market</td>
+                                                        <td>0.75</td>
+                                                        <td>0.75</td>
+                                                        <td>120.25</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>09-18 08:52:04</td>
+                                                        <td><img src="assets/images/coin/ETH.png" alt="" class="img-fluid avatar mx-1">ETH/USDT</td>
+                                                        <td>Market</td>
+                                                        <td><span class="color-price-up">Buy</span></td>
+                                                        <td>3,439.20</td>
+                                                        <td>Market</td>
+                                                        <td>0.0111</td>
+                                                        <td>0.0111</td>
+                                                        <td>38.18</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>09-17 08:34:14</td>
+                                                        <td><img src="assets/images/coin/SOL.png" alt="" class="img-fluid avatar mx-1">SOL/USDT</td>
+                                                        <td>Market</td>
+                                                        <td><span class="color-price-up">Buy</span></td>
+                                                        <td>147.04</td>
+                                                        <td>Market</td>
+                                                        <td>0.76</td>
+                                                        <td>0.71</td>
+                                                        <td>111.75</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="tab-pane fade" id="TradeHistory">
+                                            <table id="ordertabthree" class="priceTable table table-hover custom-table-2 table-bordered align-middle mb-0" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Date</th>
+                                                        <th>Pair</th>
+                                                        <th>Side</th>
+                                                        <th>Price</th>
+                                                        <th>Executed</th>
+                                                        <th>Fee</th>
+                                                        <th>Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>09-18 17:32:15</td>
+                                                        <td><img src="assets/images/coin/ETH.png" alt="" class="img-fluid avatar mx-1">ETH/USDT</td>
+                                                        <td><span class="color-price-down">Sell</span></td>
+                                                        <td>3,487.50</td>
+                                                        <td>0.0110</td>
+                                                        <td>0.03836250 USDT</td>
+                                                        <td>38.36250000 USDT</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>09-18 17:31:11</td>
+                                                        <td><img src="assets/images/coin/SOL.png" alt="" class="img-fluid avatar mx-1">SOL/USDT</td>
+                                                        <td><span class="color-price-down">Sell</span></td>
+                                                        <td>160.33</td>
+                                                        <td>0.75</td>
+                                                        <td>0.12024750 USDT</td>
+                                                        <td>120.24750000 USDT</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>09-18 08:52:04</td>
+                                                        <td><img src="assets/images/coin/ETH.png" alt="" class="img-fluid avatar mx-1">ETH/USDT</td>
+                                                        <td><span class="color-price-up">Buy</span></td>
+                                                        <td>3,439.20</td>
+                                                        <td>0.0111</td>
+                                                        <td>0.00001110 ETH</td>
+                                                        <td>38.17512000 USDT</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>09-17 08:34:14</td>
+                                                        <td><img src="assets/images/coin/SOL.png" alt="" class="img-fluid avatar mx-1">SOL/USDT</td>
+                                                        <td><span class="color-price-up">Buy</span></td>
+                                                        <td>147.04</td>
+                                                        <td>0.76</td>
+                                                        <td>0.00076000 SOL</td>
+                                                        <td>111.75040000 USDT</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1360,9 +1407,51 @@
                         </div>
                     </div>
                 </div>
-            </div>        
+            </div> 
+
+            <!-- Modal Leverage -->
+            <div class="modal fade" id="leverage" tabindex="-1"  aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-md modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title  fw-bold" id="expeditLabel"> Adjust Leverage</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="deadline-form">
+                            <form>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-sm-12">
+                                        <label class="form-label">Leverage</label>
+                                        <input type="Number" class="form-control"> 
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="input-group">
+                                            <div class="mb-2 d-flex justify-content-between align-items-center w-100">
+                                                <span class="text-muted">1X</span>
+                                                <span class="text-muted px-2">25X</span>
+                                                <span class="text-muted px-1">50X</span>
+                                                <span class="text-muted px-1">75X</span>
+                                                <span class="text-muted">100X</span>
+                                                <span class="text-muted">125X</span>
+                                            </div>
+                                            <input type="range" class="form-range" min='1' max='6' value='1' step='1'>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <p>Maximum position at current leverage: 20,000,000 <br/>USDT <span class="text-primary">Check on Leverage & Margin table</span></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Done</button>
+                        <button type="submit" class="btn btn-primary">Confirm</button>
+                    </div>
+                </div>
+                </div>
+            </div>
             
-        </div>     
+        </div>
     
     </div>
 
@@ -1371,10 +1460,10 @@
 
     <!-- Plugin Js -->
     <script src="assets/bundles/dataTables.bundle.js"></script>
-    <script src="assets/bundles/apexcharts.bundle.js"></script>
+    <script  src="https://s3.tradingview.com/tv.js"></script>
 
     <!-- Jquery Page Js -->
     <script src="../js/template.js"></script>
-    <script src="../js/page/index.js"></script>
+    <script src="../js/page/future.js"></script>  
 </body>
 </html> 

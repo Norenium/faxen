@@ -4,19 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Faxen -  Dashboard </title>
+    <title>Faxen - Calendar </title>
     <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
-
+    
     <!-- plugin css file  -->
-    <link rel="stylesheet" href="assets/plugin/datatables/responsive.dataTables.min.css">
-    <link rel="stylesheet" href="assets/plugin/datatables/dataTables.bootstrap5.min.css"> 
+    <link rel="stylesheet" href="assets/plugin/fullcalendar/main.min.css">
     
     <!-- project css file  -->
     <link rel="stylesheet" href="assets/css/cryptoon.style.min.css">
 </head>
 <body>
     <div id="cryptoon-layout" class="theme-orange">
-        
+    
         <!-- sidebar -->
         <div class="sidebar py-2 py-md-2 me-0 border-end">
             <div class="d-flex flex-column h-100">
@@ -30,7 +29,7 @@
                 <!-- Menu: main ul -->
                 <ul class="menu-list flex-grow-1 mt-4 px-1">
                     <li>
-                        <a class="m-link active" href="index.html">
+                        <a class="m-link" href="index.html">
                             <svg xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="24px" height="24px" viewBox="0 0 38 38">
                                 <path xmlns="http://www.w3.org/2000/svg"  d="M34,18.756V34H22v-8h-6v8h-4V14.31l7-3.89L34,18.756z M34,16.472V6h-6v7.139L34,16.472z" style="fill:var(--primary-color);" data-st="fill:var(--chart-color4);"></path>
                                 <path xmlns="http://www.w3.org/2000/svg" class="st0" d="M34,14.19V6h-6v2h4v5.08L19,5.86L0.51,16.13l0.98,1.74L19,8.14l17.51,9.73l0.98-1.74L34,14.19z M32,32h-8v-8H14  v8H6V17.653l-2,1.111V34h12v-8h6v8h12V18.764l-2-1.111V32z"></path>
@@ -50,7 +49,8 @@
                     <li>
                         <a class="m-link" href="market.html">
                             <svg  xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="24px" height="24px" viewBox="0 0 64 64">
-                                    <linearGradient id="crp_svg" gradientUnits="userSpaceOnUse" x1="13.876" y1="13.876" x2="50.1249" y2="50.1249">
+                            
+                                     <linearGradient id="crp_svg" gradientUnits="userSpaceOnUse" x1="13.876" y1="13.876" x2="50.1249" y2="50.1249">
                                         <stop  offset="0" class="st2"/>
                                         <stop  offset="1" class="st3"/>
                                     </linearGradient>
@@ -71,7 +71,7 @@
                                         M52.517,15.536c1.913-1.104,4.359-0.449,5.464,1.464s0.45,4.36-1.463,5.464s-4.36,0.448-5.465-1.465S50.604,16.641,52.517,15.536z
                                         M39,44.124c-1.914,1.104-2.568,3.552-1.465,5.465s3.552,2.568,5.465,1.464s2.568-3.552,1.463-5.465
                                         C43.359,43.676,40.912,43.02,39,44.124z M38,32c0,3.313-2.687,6-6,6s-6-2.687-6-6s2.687-6,6-6S38,28.687,38,32z"/>
-                              
+                                
                             </svg>
                             <div><h6 class="mb-0">Market</h6><small class="text-muted">Market CryptoPrice</small></div>
                         </a>
@@ -79,7 +79,7 @@
                     <li>
                         <a class="m-link" href="ico.html">
                             <svg  xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="24px" height="24px" viewBox="0 0 64 64">
-                                
+                            
                                     <path class="st1" d="M20,57.921c-0.37,0-0.741-0.096-1.072-0.288L6.071,50.206C5.408,49.823,5,49.116,5,48.352V33.506
                                         c0-0.765,0.409-1.473,1.071-1.856l12.857-7.422c0.663-0.383,1.479-0.383,2.143,0l12.856,7.422C34.592,32.033,35,32.741,35,33.506
                                         v14.846c0,0.765-0.408,1.472-1.072,1.854l-12.856,7.427C20.741,57.825,20.37,57.921,20,57.921z M11,46.125l9,5.198l9-5.198V35.732
@@ -93,7 +93,7 @@
                                     <path class="st0" d="M31.997,51.321l-13.926-8.046C17.408,42.893,17,42.184,17,41.419V25.341l13.929-8.044
                                         c0.663-0.383,1.479-0.383,2.144,0L47,25.339v16.08c0,0.765-0.408,1.474-1.072,1.856L31.997,51.321z M23,39.195l9,5.198l9-5.198
                                         V28.802l-9-5.194l-9,5.194V39.195z"/>
-                               
+                                
                             </svg>
                             <div><h6 class="mb-0">Ico</h6><small class="text-muted">Initial Coin Offering</small></div>
                         </a>
@@ -106,11 +106,11 @@
                                         C22.345,37.315,21.972,35.828,21.972,34.25z M41.17,38.647l8.673,1.635L37.55,16.574l-3.491,7.764
                                         c4.635,0.92,8.129,5.006,8.129,9.912C42.188,35.828,41.815,37.315,41.17,38.647z M32.08,26.968c-3.875,0-7.016,3.141-7.016,7.016
                                         c0,3.874,3.141,7.016,7.016,7.016c3.875,0,7.018-3.142,7.018-7.016C39.098,30.109,35.955,26.968,32.08,26.968z"/>
-                                   
+                                
                                     <path class="st1" d="M60.001,32c0.001,15.461-12.539,28-28.003,28C16.538,60,4,47.462,4.001,32.002C3.997,16.537,16.536,4,31.996,4
                                         C47.46,4,60,16.537,60.001,32L60.001,32z M54.001,32C54,19.851,44.144,10,31.996,10c-12.145,0-21.999,9.85-21.995,22.001
                                         C10,44.146,19.852,54,31.998,54C44.146,54,54.002,44.145,54.001,32L54.001,32z"/>
-                               
+                                
                             </svg>
                             <div><h6 class="mb-0">Future</h6><small class="text-muted">Future Trade</small></div>
                         </a>
@@ -145,6 +145,7 @@
                                                 C15.214,43.411,8.157,47.727,8.007,48.336c-0.16,0.711,2.051,4.043,2.764,4.166c0.644,0.11,7.943-5.148,21.229-14.186
                                                 c13.285,9.037,20.585,14.296,21.229,14.186c0.713-0.123,2.924-3.455,2.764-4.166c-0.148-0.609-7.207-4.925-19.663-12.954
                                                 c0.204-0.138,0.396-0.269,0.604-0.408C44.032,30.183,48.824,27.017,52.069,24.893z"/>
+                                    
                                             <path class="st0" d="M45.01,30c-0.353,0-0.701,0.103-1.01,0.234v-2.661C44,21.178,37.885,16,32,16c-5.878,0-12,5.178-12,11.573
                                                 v2.66C19.692,30.102,19.344,30,18.992,30C17.998,30,17,30.818,17,34.081C17,37.348,18.161,40,20.1,40
                                                 c0.055,0,0.097-0.024,0.149-0.031c0.642,4.521,2.502,7.143,5.143,9.307C26.98,50.576,29.168,52,32,52
@@ -167,7 +168,7 @@
                                         C23.923,19.054,24,18.537,24,18c0-3.313-2.687-6-6-6s-6,2.687-6,6s2.687,6,6,6c0.537,0,1.054-0.077,1.549-0.209L40.82,45.063
                                         l-2.378,2.379c-0.395,0.395-0.537,0.975-0.372,1.508c0.167,0.533,0.615,0.93,1.164,1.029l11,2
                                         C51.204,52.154,52.155,51.203,51.979,50.234z"/>
-                               
+                                
                             </svg> <div><h6 class="mb-0">Trade</h6><small class="text-muted">Easiest Way to Trade</small></div> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span>
                         </a>
                         <!-- Menu: Sub menu ul -->
@@ -181,7 +182,7 @@
                     <li class="collapsed">
                         <a class="m-link" data-bs-toggle="collapse" data-bs-target="#finace" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 64 64">
-                                
+                            
                                     <path class="st1" d="M31.997,60C16.537,60,3.999,47.462,4,32.002C3.996,16.537,16.535,4,31.995,4C47.459,4,59.999,16.537,60,32
                                         S47.461,60,31.997,60z M53.999,32c-0.001-12.149-9.857-22-22.005-22C19.85,10,9.995,19.851,9.999,32.002
                                         C9.998,44.146,19.85,54,31.996,54C44.144,54,54,44.145,53.999,32L53.999,32z"/>
@@ -194,7 +195,7 @@
                                         C45.095,32.224,46.821,30.714,47.282,27.597L47.282,27.597z M39.26,38.847c-1.084,4.36-8.425,2.004-10.806,1.413l1.929-7.729
                                         C32.761,33.124,40.395,34.3,39.26,38.847L39.26,38.847z M40.346,27.535c-0.989,3.966-7.1,1.951-9.083,1.458l1.748-7.011
                                         C34.994,22.476,41.377,23.397,40.346,27.535z"/>
-                            
+                                
                             </svg> 
                             <div><h6 class="mb-0">Finace</h6><small class="text-muted">Investment Solution</small></div><span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span>
                         </a>
@@ -206,15 +207,15 @@
                         </ul>
                     </li>
                     <li class="collapsed">
-                        <a class="m-link" data-bs-toggle="collapse" data-bs-target="#app" href="#">
+                        <a class="m-link active" data-bs-toggle="collapse" data-bs-target="#app" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 38 38" width="24px" height="24px">
                                 <ellipse   cx="19" cy="17" rx="13" ry="9" style="fill:var(--primary-color);" data-st="fill:var(--primary-color);"></ellipse>
                                 <path class="st0" d="M38,17c0,8.3-8.5,15-19,15c-0.6,0-1.3,0-1.9-0.1L11,38v-9.6c0.6,0.3,1.3,0.5,2,0.7v4l3.3-3.3  c0.9,0.1,1.7,0.2,2.7,0.2c9.4,0,17-5.8,17-13c0-7.2-7.6-13-17-13C9.6,4,2,9.8,2,17c0,4.3,2.8,8.1,7,10.5v2.2C3.6,27.1,0,22.4,0,17  C0,8.7,8.5,2,19,2C29.5,2,38,8.7,38,17z M16,18h-4v2h4V18z M16,14h-4v2h4V14z M22,18h2c2.2,0,4-1.8,4-4s-1.8-4-4-4h-4v14h2V18z   M22,12h2c1.1,0,2,0.9,2,2s-0.9,2-2,2h-2V12z" ></path>
                             </svg> 
                         <div><h6 class="mb-0">App</h6><small class="text-muted">Chat Grop</small></div> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span></a>
                         <!-- Menu: Sub menu ul -->
-                        <ul class="sub-menu collapse" id="app">
-                            <li><a class="ms-link" href="calendar.html">Calandar</a></li>
+                        <ul class="sub-menu collapse show" id="app">
+                            <li><a class="ms-link active" href="calendar.html">Calandar</a></li>
                             <li><a class="ms-link" href="chat.html"> Chat App</a></li>
                         </ul>
                     </li>
@@ -294,7 +295,7 @@
                                             <path class="st0" d="M42,4c-4.418,0-8,3.582-8,8s3.582,8,8,8c4.417,0,8-3.582,8-8S46.417,4,42,4z M42,16c-2.208,0-4-1.792-4-4
                                                 s1.792-4,4-4s4,1.792,4,4S44.208,16,42,16z"/>
                                             <path class="st0" d="M26,20c-4.418,0-8,3.582-8,8h4c0-2.208,1.792-4,4-4s4,1.792,4,4h4C34,23.582,30.418,20,26,20z"/>
-                                       
+                                        
                                     </svg>
                                 </a>
                             </div>
@@ -499,7 +500,35 @@
                                             <a class="badge bg-primary" href="#">Color Full <i class="fa fa-search ms-1"></i></a>
                                         </div>
                             
+                                        <div class="dropdown-divider my-2"></div>
                                         
+                                        <small class="dropdown-header">Tutorials</small>
+                                        <a class="d-flex align-items-center dropdown-item py-2" href="#">
+                                            <span class="avatar sm no-thumbnail me-2"><i class="fa fa-github"></i></span>
+                                            <div class="text-truncate">
+                                                <span>How to set up Github?</span>
+                                            </div>
+                                        </a>
+                                        <a class="d-flex align-items-center dropdown-item py-2" href="#">
+                                            <span class="avatar sm no-thumbnail me-2"><i class="fa fa-paint-brush"></i></span>
+                                            <div class="text-truncate">
+                                                <span>How to change theme color?</span>
+                                            </div>
+                                        </a>
+                
+                                        <small class="dropdown-header">Members</small>
+                                        <a class="d-flex align-items-center dropdown-item py-2" href="#">
+                                            <img class="avatar sm rounded-circle" src="assets/images/xs/avatar1.svg" alt="">
+                                            <div class="text-truncate ms-2">
+                                                <span>Birju Ips</span>
+                                            </div>
+                                        </a>
+                                        <a class="d-flex align-items-center dropdown-item py-2" href="#">
+                                            <img class="avatar sm rounded-circle" src="assets/images/xs/avatar2.svg" alt="">
+                                            <div class="text-truncate ms-2">
+                                                <span>Herry Disel</span>
+                                            </div>
+                                        </a>
                 
                                     </div>
                                 </div>
@@ -516,9 +545,9 @@
                             <div class="card shadow menu slidedown position-absolute zindex-modal">
                                 <div class="card-body p-3">
                                     <div class="row g-3">
-                                        <div class="d-none d-lg-block col-lg-2 text-start">
+                                        <div class="col-lg-2 text-start">
                                             <h6 class="px-2 text-primary mb-0">Download App</h6>
-                                            <img src="assets/images/qr-code.png" alt="Download App" class="img-fluid">
+                                                <img src="assets/images/qr-code.png" alt="Download App" class="img-fluid">
                                         </div>
                                         <div class="col-lg-10">
                                             <ul class="menu-grid list-unstyled row row-cols-xl-3 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-4 mb-0 mt-lg-3">
@@ -614,8 +643,8 @@
                                                     <a href="ui-elements/documentation.html" class="d-flex color-700">
                                                         <div class="avatar">
                                                             <svg xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="24px" height="24px" viewBox="0 0 32 32">
-                                                                <path xmlns="http://www.w3.org/2000/svg"   d="M25.5,9.78V28.5c0,0.56-0.44,1-1,1h-17c-0.56,0-1-0.44-1-1v-25c0-0.55,0.45-1,1-1h10.72  L25.5,9.78z" style="fill:var(--primary-color);" data-st="fill:var(--chart-color4);"></path>
-                                                                <path xmlns="http://www.w3.org/2000/svg" class="st0" d="M19.5,9.5c-0.561,0-1-0.439-1-1V2.793L25.207,9.5H19.5z"></path>
+                                                            <path xmlns="http://www.w3.org/2000/svg"   d="M25.5,9.78V28.5c0,0.56-0.44,1-1,1h-17c-0.56,0-1-0.44-1-1v-25c0-0.55,0.45-1,1-1h10.72  L25.5,9.78z" style="fill:var(--primary-color);" data-st="fill:var(--chart-color4);"></path>
+                                                            <path xmlns="http://www.w3.org/2000/svg" class="st0" d="M19.5,9.5c-0.561,0-1-0.439-1-1V2.793L25.207,9.5H19.5z"></path>
                                                             <path xmlns="http://www.w3.org/2000/svg" class="st0" d="M19,16c0-2.65,0.54-4,2-4c0.98,0,1.7,0.63,2,1.83l-0.89,0.6C21.92,13.49,21.43,13,21,13c-0.62,0-1,1.01-1,3  s0.38,3,1,3c0.43,0,0.92-0.49,1.11-1.43l0.89,0.6c-0.3,1.2-1.02,1.83-2,1.83C19.54,20,19,18.65,19,16z M18,16c0,3-0.9,4-2,4  c-1.1,0-2-1-2-4s0.9-4,2-4C17.1,12,18,13,18,16z M17,16c0-0.7,0-3-1-3s-1,2.3-1,3s0,3,1,3S17,16.7,17,16z M13,16.04  c0,2.88-0.8,3.96-2.4,3.96C9.8,20,9,20,9,20v-8c0,0,0.8,0,1.6,0C12.2,12,13,13.15,13,16.04z M12,16.03c0-2.17-0.52-3.03-1.33-3.03  c-0.4,0-0.67,0-0.67,0v6c0,0,0.27,0,0.67,0C11.48,19,12,18.2,12,16.03z M26,10v18.5c0,0.828-0.672,1.5-1.5,1.5h-17  C6.672,30,6,29.328,6,28.5v-25C6,2.672,6.672,2,7.5,2H18c0.621,0,0.646,0.232,1,0.586L25.414,9C25.768,9.354,26,9.368,26,10z   M19,8.5C19,8.776,19.224,9,19.5,9c0,0,2.639,0,4.5,0l-5-5V8.5z M25,10h-5.5C18.672,10,18,9.328,18,8.5V3c0,0-9.5,0-10.5,0  C7.225,3,7,3.224,7,3.5v25C7,28.776,7.225,29,7.5,29h17c0.275,0,0.5-0.224,0.5-0.5C25,28,25,10,25,10z"></path>
                                                             </svg>
                                                         </div>
@@ -654,581 +683,50 @@
 
             </div>
 
-            <!-- Body: Body -->
-            <div class="body d-flex py-3"> 
+            <!-- Body: Titel Header -->
+            <div class="body-header border-bottom d-flex py-3">
                 <div class="container-xxl">
-
-                    <div class="row g-3 mb-3">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row g-3 align-items-center">
-                                        <div class="col-md-6 col-lg-6 col-xl-3">
-                                            <div class="d-flex">
-                                                <img class="avatar rounded-circle" src="assets/images/profile_av.svg" alt="profile">
-                                                <div class="flex-fill ms-3">
-                                                    <p class="mb-0"><span class="font-weight-bold">John	Quinn</span></p>
-                                                    <small class="">Johnquinn@gmail.com</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 col-xl-3">
-                                            <div class="d-flex flex-column">
-                                                <span class="text-muted mb-1">User ID:164647708</span>
-                                                <span class="small text-muted flex-fill text-truncate">Last login time 2021-09-29 10:56:22</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 col-xl-2">
-                                            <div class="d-flex-inline">
-                                                <span class="badge bg-careys-pink mb-1">Personal</span>
-                                                <span class="small text-muted d-flex align-items-center"><i class="icofont-diamond px-1 fs-5 color-lightyellow "></i> VIP</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 col-xl-4">
-                                            <a href="referral.html" title="invite" class="btn btn-primary text-dark mb-1">40% commission:Invite friends now!</a>
-                                            <a href="#" title="invite" class="d-block"><i class="icofont-twitter px-1 fs-6 color-lightblue"></i>not linked</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- Row End -->
-
-                    <div class="row g-3 mb-3 row-cols-1 row-cols-md-2 row-cols-lg-4">
+                    <div class="row align-items-center">
                         <div class="col">
-                            <div class="card">
-                                <div class="card-body d-flex align-items-center">
-                                    <div class="flex-fill text-truncate">
-                                        <span class="text-muted small text-uppercase">BNB/BUSD</span>
-                                        <div class="d-flex flex-column">
-                                            <div class="price-block">
-                                                <span class="fs-6 fw-bold color-price-up">418</span>
-                                                <span class="small text-muted px-2">$418</span>
-                                            </div>
-                                            <div class="price-report">
-                                                <span class="small text-danger">- 1.28% <i class="fa fa-level-down"></i></span>
-                                                <span class="small text-muted px-2">Volume:109,267,865.92 BUSD</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="apexspark1"></div>
-                            </div>
+                            <!-- Pretitle -->
+                            <h1 class="h4 mt-1">Calendar</h1>
                         </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body d-flex align-items-center">
-                                    <div class="flex-fill text-truncate">
-                                        <span class="text-muted small text-uppercase">ETH/USDT</span>
-                                        <div class="d-flex flex-column">
-                                            <div class="price-block">
-                                                <span class="fs-6 fw-bold color-price-down">3499</span>
-                                                <span class="small text-muted px-2">$3500</span>
-                                            </div>
-                                            <div class="price-report">
-                                                <span class="small text-danger">- 1.79% <i class="fa fa-level-down"></i></span>
-                                                <span class="small text-muted px-2">Volume:541,545,011.76 USDT</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="apexspark2"></div>
-                            </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addevent"><i class="icofont-plus-circle me-2 fs-6"></i>Add Event</button> 
                         </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body d-flex align-items-center">
-                                    <div class="flex-fill text-truncate">
-                                        <span class="text-muted small text-uppercase">DOT/BUSD</span>
-                                        <div class="d-flex flex-column">
-                                            <div class="price-block">
-                                                <span class="fs-6 fw-bold">35.00</span>
-                                                <span class="small text-muted px-2">$35</span>
-                                            </div>
-                                            <div class="price-report">
-                                                <span class="small text-success">+ 3.78% <i class="fa fa-level-up"></i></span>
-                                                <span class="small text-muted px-2">Volume:63,324,607.43 BUSD BUSD</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="apexspark3"></div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body d-flex align-items-center">
-                                    <div class="flex-fill text-truncate">
-                                        <span class="text-muted small text-uppercase">GRT/USDT</span>
-                                        <div class="d-flex flex-column">
-                                            <div class="price-block">
-                                                <span class="fs-6 fw-bold color-price-up">0.8413</span>
-                                                <span class="small text-muted px-2">$1</span>
-                                            </div>
-                                            <div class="price-report">
-                                                <span class="small text-danger">- 1.11% <i class="fa fa-level-down"></i></span>
-                                                <span class="small text-muted px-2">Volume:28,538,521.44 USDT</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="apexspark4"></div>
-                            </div>
-                        </div>
-                    </div><!-- Row End -->
-
-                    <div class="row g-3 mb-3 row-deck">
-                        <div class="col-xl-12 col-xxl-7">
-                            <div class="card">
-                                <div class="card-header py-3 d-flex justify-content-between bg-transparent border-bottom align-items-center flex-wrap">
-                                    <h6 class="mb-0 fw-bold">Balance Details</h6> 
-                                    <ul class="nav nav-tabs tab-body-header rounded d-inline-flex mt-2 mt-md-0" role="tablist">
-                                        <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#Spot" role="tab">Spot</a></li>
-                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#P2P" role="tab">P2P</a></li>
-                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Margin" role="tab">Margin</a></li>
-                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Future" role="tab">Future</a></li>
-                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Earn" role="tab">Earn</a></li>
-                                    </ul>
-                                </div>
-                                <div class="card-body">
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade show active" id="Spot">
-                                            <div class="row g-3">
-                                                <div class="col-lg-6">
-                                                    <div>Account balance:</div>
-                                                    <h3>0.18005388 BTC</h3>
-                                                    <div class="mt-3 pt-3 text-uppercase text-muted pt-2 small">Buy this month</div>
-                                                    <h5>3.0675432 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Sell this month</div>
-                                                    <h5>2.0345618 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Estimated Value:</div>
-                                                    <h5>$22000.29</h5>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div id="apex-simple-donut"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="P2P">
-                                            <div class="row g-3">
-                                                <div class="col-lg-6">
-                                                    <div>Account balance:</div>
-                                                    <h3>0.00005388 BTC</h3>
-                                                    <div class="mt-3 pt-3 text-uppercase text-muted pt-2 small">Buy this month</div>
-                                                    <h5>0.00005388 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Sell this month</div>
-                                                    <h5>2.0345618 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Estimated Value:</div>
-                                                    <h5>$2000.29</h5>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div id="apex-simple-donutp2p"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="Margin">
-                                            <div class="row g-3">
-                                                <div class="col-lg-6">
-                                                    <div>Total balance:</div>
-                                                    <h3>0.00095000 BTC≈$3570</h3>
-                                                    <div class="mt-3 pt-3 text-uppercase text-muted pt-2 small">Total Debt:</div>
-                                                    <h5>0.00005388 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Account Equity:</div>
-                                                    <h5>2.0345618 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Profit & Loss:</div>
-                                                    <h5>0.95 BTC(1.6.00%) $25 (8.00%)</h5>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div id="apex-circle-chart-multiplemargin"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="Future">
-                                            <div class="row g-3">
-                                                <div class="col-lg-6">
-                                                    <div>Total Margin Balance:</div>
-                                                    <h3>0.00095000 BTC≈$3570</h3>
-                                                    <div class="mt-3 pt-3 text-uppercase text-muted pt-2 small">Total Wallet Balance:</div>
-                                                    <h5>0.00005388 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Total Unrealized PNL:</div>
-                                                    <h5>2.0345618 BTC</h5>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div id="apex-circle-gradientfuture"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="Earn">
-                                            <div class="row g-3">
-                                                <div class="col-lg-6">
-                                                    <div>Total Margin Balance:</div>
-                                                    <h3>0.00095000 BTC≈$3570</h3>
-                                                    <div class="mt-3 pt-3 text-uppercase text-muted pt-2 small">Locked:</div>
-                                                    <h5>0.00000388 BTC</h5>
-                                                    <div class="mt-3 text-uppercase text-muted small">Flexible:</div>
-                                                    <h5>0.0000018 BTC</h5>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div id="apex-circle-chartearn"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-12 col-xxl-5">
-                            <div class="card">
-                                <div class="card-header py-3 d-flex justify-content-between bg-transparent align-items-center">
-                                    <h6 class="mb-0 fw-bold">Increase your account security</h6> 
-                                    <a href="security.html" title="security" class="d-inline-flex"><i class="icofont-caret-right fs-5"></i></a>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row row-cols-2 g-0">
-                                        <div class="col">
-                                            <div class="security border-bottom border-end">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-green mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Enable 2FA</span>
-                                                        <span>Enabled</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="security border-bottom">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-green mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Identity Verification</span>
-                                                        <span>Verified</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="security border-bottom border-end">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-red mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Anti-phishing Code</span>
-                                                        <a href="security.html" title="setup" class="text-decoration-underline">Setup</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="security border-bottom">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-red mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Withdrawal Whitelist</span>
-                                                        <a href="security.html" title="setup" class="text-decoration-underline">Turn on</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="security border-bottom border-end">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-red mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Security Key</span>
-                                                        <a href="security.html" title="setup" class="text-decoration-underline">Setup</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="security border-bottom">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-red mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Google Authenticator</span>
-                                                        <a href="security.html" title="setup" class="text-decoration-underline">Setup</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="security  border-end">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-green mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Phone Number</span>
-                                                        <span>74****57</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="security ">
-                                                <div class="d-flex align-items-start px-2 py-3">
-                                                    <div class="dot-green mx-2 my-2"></div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="flex-fill text-truncate">Email Address </span>
-                                                        <span>ni***@gmail.com</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- Row End -->
-
-                    <div class="row g-3 mb-3 row-deck">
-                        <div class="col-xl-4 col-xxl-5">
-                            <div class="card">
-                                <div class="card-header py-3 d-flex flex-wrap justify-content-between align-items-center bg-transparent border-bottom-0">
-                                    <h6 class="mb-0 fw-bold">Top Coin Volume</h6>
-                                </div>
-                                <div class="card-body">
-                                    <span class="h3 d-block mb-2">$97,431.14 USD</span>
-                                    <!-- Progress -->
-                                    <div class="progress rounded-pill mb-1" style="height: 5px;">
-                                        <div class="progress-bar chart-color1" role="progressbar" style="width: 32%" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100"></div>
-                                        <div class="progress-bar chart-color2" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
-                                        <div class="progress-bar chart-color3" role="progressbar" style="width: 13%" aria-valuenow="13" aria-valuemin="0" aria-valuemax="100"></div>
-                                        <div class="progress-bar chart-color4" role="progressbar" style="width: 7%" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="d-flex justify-content-between mb-4">
-                                        <span>0%</span>
-                                        <span>100%</span>
-                                    </div>
-                                    <!-- End Progress -->
-                                    <div class="table-responsive">
-                                        <table class="table  table-nowrap mb-0">
-                                            <tbody>
-                                                <tr>
-                                                    <td><i class="fa fa-square chart-text-color1"></i> BTC</td>
-                                                    <td>5.71095643</td>
-                                                    <td><span class="badge bg-success">+12.1%</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="fa fa-square chart-text-color2"></i> LTC</td>
-                                                    <td>2.409425</td>
-                                                    <td><span class="badge bg-warning">+6.9%</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="fa fa-square chart-text-color3"></i> XRP</td>
-                                                    <td>0.0906654</td>
-                                                    <td><span class="badge bg-danger">-1.5%</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="fa fa-square chart-text-color4"></i> DASH</td>
-                                                    <td>0.007653</td>
-                                                    <td><span class="badge bg-success">1.9%</span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-xxl-7">
-                           <div class="card">
-                                <div class="card-header py-3 d-flex justify-content-between bg-transparent border-bottom align-items-center flex-wrap">
-                                    <h6 class="mb-0 fw-bold">Login Activity</h6> 
-                                    <ul class="nav nav-tabs tab-body-header rounded d-inline-flex mt-2 mt-md-0" role="tablist">
-                                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Activity" role="tab">Activity</a></li>
-                                        <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#Devices" role="tab">Devices</a></li>
-                                    </ul>
-                                </div>
-                               <div class="card-body">
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade" id="Activity">
-                                            <ul class="list-unstyled list mb-0">
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color1"><i class="fa fa-globe" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">web</div>
-                                                        <small class="text-muted">Mumbai India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">122.170.109.22</span>
-                                                        <span class="text-muted d-block small">2021-09-30 11:00:52</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color2"><i class="fa fa-globe" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">web</div>
-                                                        <small class="text-muted">Mumbai India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">122.170.109.22</span>
-                                                        <span class="text-muted d-block small">2021-09-30 11:00:20</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color3"><i class="fa fa-globe" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">web</div>
-                                                        <small class="text-muted">Mumbai India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">122.170.109.21</span>
-                                                        <span class="text-muted d-block small">2021-09-29 10:56:22</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color4"><i class="fa fa-globe" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">web</div>
-                                                        <small class="text-muted">Pune India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">198.182.109.22</span>
-                                                        <span class="text-muted d-block small">2021-09-30 12:50:52</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color2"><i class="fa fa-globe" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">web</div>
-                                                        <small class="text-muted">Banglor India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">126.150.109.22</span>
-                                                        <span class="text-muted d-block small">2021-09-30 10:00:20</span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="tab-pane fade show active" id="Devices">
-                                            <ul class="list-unstyled list mb-0">
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color1"><i class="fa fa-chrome" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">Chrome V94.0.4606.61 (Windows)</div>
-                                                        <small class="text-muted">Mumbai India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">122.170.109.22</span>
-                                                        <span class="text-muted d-block small">2021-09-30 11:00:52</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color2"><i class="fa fa-mobile" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">iPhone</div>
-                                                        <small class="text-muted">Mumbai India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">27.57.172.87</span>
-                                                        <span class="text-muted d-block small">2021-09-23 09:03:35</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color3"><i class="fa fa-firefox" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">Mozila V92.0.4515.159 (Windows)</div>
-                                                        <small class="text-muted">Mumbai India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">117.99.104.150</span>
-                                                        <span class="text-muted d-block small">2021-08-19 08:01:44</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color4"><i class="fa fa-mobile" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">Android</div>
-                                                        <small class="text-muted">Pune India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">118.99.104.150</span>
-                                                        <span class="text-muted d-block small">2021-09-30 12:50:52</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex align-items-center py-2">
-                                                    <div class="avatar rounded no-thumbnail chart-text-color3"><i class="fa fa-safari" aria-hidden="true"></i></div>
-                                                    <div class="flex-fill ms-3">
-                                                        <div class="h6 mb-0">Safari V84.0.4515.159 (Mac)</div>
-                                                        <small class="text-muted">Banglor India</small>
-                                                    </div>
-                                                    <div class="flex-end">
-                                                        <span class="d-block text-end">177.192.104.150</span>
-                                                        <span class="text-muted d-block small">2021-08-19 07:01:44</span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                               </div>
-                           </div>   
-                        </div>
-                    </div><!-- Row End -->
-
-                    <div class="row g-3 mb-3 row-deck">
-                        <div class="col-xl-12">
-                            <div class="card">
-                                <div class="card-header py-3 d-flex justify-content-between">
-                                    <h6 class="mb-0 fw-bold">Recent Transactions</h6> 
-                                </div>
-                                <div class="card-body">
-                                    <table id="ordertabthree" class="priceTable table table-hover custom-table-2 table-bordered align-middle mb-0" style="width:100%">
-                                        <thead>
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Pair</th>
-                                                <th>Side</th>
-                                                <th>Price</th>
-                                                <th>Executed</th>
-                                                <th>Fee</th>
-                                                <th>Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>09-18 17:32:15</td>
-                                                <td><img src="assets/images/coin/ETH.png" alt="" class="img-fluid avatar mx-1">ETH/USDT</td>
-                                                <td><span class="color-price-down">Sell</span></td>
-                                                <td>3,487.50</td>
-                                                <td>0.0110</td>
-                                                <td>0.03836250 USDT</td>
-                                                <td>38.36250000 USDT</td>
-                                            </tr>
-                                            <tr>
-                                                <td>09-18 17:31:11</td>
-                                                <td><img src="assets/images/coin/SOL.png" alt="" class="img-fluid avatar mx-1">SOL/USDT</td>
-                                                <td><span class="color-price-down">Sell</span></td>
-                                                <td>160.33</td>
-                                                <td>0.75</td>
-                                                <td>0.12024750 USDT</td>
-                                                <td>120.24750000 USDT</td>
-                                            </tr>
-                                            <tr>
-                                                <td>09-18 08:52:04</td>
-                                                <td><img src="assets/images/coin/ETH.png" alt="" class="img-fluid avatar mx-1">ETH/USDT</td>
-                                                <td><span class="color-price-up">Buy</span></td>
-                                                <td>3,439.20</td>
-                                                <td>0.0111</td>
-                                                <td>0.00001110 ETH</td>
-                                                <td>38.17512000 USDT</td>
-                                            </tr>
-                                            <tr>
-                                                <td>09-17 08:34:14</td>
-                                                <td><img src="assets/images/coin/SOL.png" alt="" class="img-fluid avatar mx-1">SOL/USDT</td>
-                                                <td><span class="color-price-up">Buy</span></td>
-                                                <td>147.04</td>
-                                                <td>0.76</td>
-                                                <td>0.00076000 SOL</td>
-                                                <td>111.75040000 USDT</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- Row End -->
-
+                    </div> <!-- Row end  -->
                 </div>
             </div>
-        
+
+            <!-- Body: Body -->
+            <div class="body d-flex py-lg-3 py-md-2">
+                <div class="container-xxl">
+                    <div class="row clearfix g-3">
+                        <div class="col-lg-12 col-md-12 ">
+                        <!-- card: Calendar -->
+                            <div class="card">
+                                <div class="card-body" id='my_calendar'></div>
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                    var calendarEl = document.getElementById('my_calendar');
+                                
+                                    var calendar = new FullCalendar.Calendar(calendarEl, {
+                                        timeZone: 'UTC',
+                                        initialView: 'dayGridMonth',
+                                        events: 'https://fullcalendar.io/demo-events.json',
+                                        editable: true,
+                                        selectable: true
+                                    });
+                                
+                                    calendar.render();
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div><!-- Row End -->
+                </div>
+            </div>
+
             <!-- Modal Custom Settings-->
             <div class="modal fade right" id="Settingmodal" tabindex="-1"  aria-hidden="true">
                 <div class="modal-dialog  modal-sm">
@@ -1360,21 +858,62 @@
                         </div>
                     </div>
                 </div>
-            </div>        
-            
-        </div>     
-    
+            </div>
+
+            <!-- Add Event-->
+            <div class="modal fade" id="addevent" tabindex="-1"  aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-md modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title  fw-bold" id="eventaddLabel">Add Event</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput99" class="form-label">Event Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput99">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFileMultipleone" class="form-label">Event Images</label>
+                            <input class="form-control" type="file" id="formFileMultipleone">
+                        </div>
+                        <div class="deadline-form">
+                            <form>
+                                <div class="row g-3 mb-3">
+                                <div class="col">
+                                    <label for="datepickerded" class="form-label">Event Start Date</label>
+                                    <input type="date" class="form-control" id="datepickerded">
+                                </div>
+                                <div class="col">
+                                    <label for="datepickerdedone" class="form-label">Event End Date</label>
+                                    <input type="date" class="form-control" id="datepickerdedone">
+                                </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea78" class="form-label">Event Description (optional)</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea78" rows="3" placeholder="Add any extra details about the request"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Done</button>
+                        <button type="button" class="btn btn-primary">Create</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+                
+        </div>
     </div>
 
     <!-- Jquery Core Js -->
     <script src="assets/bundles/libscripts.bundle.js"></script>
 
-    <!-- Plugin Js -->
-    <script src="assets/bundles/dataTables.bundle.js"></script>
-    <script src="assets/bundles/apexcharts.bundle.js"></script>
+    <!-- Plugin Js-->
+    <script src="assets/plugin/fullcalendar/main.min.js"></script>
 
     <!-- Jquery Page Js -->
     <script src="../js/template.js"></script>
-    <script src="../js/page/index.js"></script>
 </body>
-</html> 
+</html>
